@@ -5,7 +5,6 @@ import 'game.dart';
 
 void main() {
   //literal ค่าที่มองเห็นเลยไม่ต้องผ่านตัวแปรใดๆ const
-  List<int> myList = [];
   while (true) {
     stdout.write('Enter a maximum number to random: ');
     var input1 = stdin.readLineSync();
@@ -52,11 +51,9 @@ void main() {
       stdout.write('Play again? (Y/N): ');
       var again = stdin.readLineSync();
       if (again == 'Y' || again == 'y') {
-        myList.add(game.guessCount);
         check = false;
         break;
       } else if (again == 'N' || again == 'n') {
-        myList.add(game.guessCount);
         check = true;
         break;
       } else {
@@ -67,15 +64,12 @@ void main() {
     if (check == false) {
       continue;
     }else{
+      game.DisplayResult();
       break;
     }
 
   }
 
-  print('You have played ${myList.length} games');
-  for (var i = 0; i < myList.length; i++) {
-    stdout.write('🚀 Game #${i+1}: ${myList[i]} guesses\n');
   }
 
 
-}
