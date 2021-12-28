@@ -23,12 +23,12 @@ class Game {
 
   int doGuess(int num) {
     guessCount++;
-    myList.add(guessCount);
     if (num > _answer!) {
       return 1;
     } else if (num < _answer!) {
       return -1;
     } else {
+      myList.add(guessCount);
       return 0;
     }
   }
