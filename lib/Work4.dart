@@ -6,8 +6,6 @@ import 'game.dart';
 void main() {
   //literal ค่าที่มองเห็นเลยไม่ต้องผ่านตัวแปรใดๆ const
   List<int> myList = [];
-  int count1=0;
-
   while (true) {
     stdout.write('Enter a maximum number to random: ');
     var input1 = stdin.readLineSync();
