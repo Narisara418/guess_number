@@ -6,9 +6,9 @@ void main(){
   var i=0;
   var r = Random();
   var answer = r.nextInt(100);
-  print('╔══════════════════════════════════════════ ');
+  print('╔═══════════════════════════════════════════ ');
   print('║              GUESS THE NUMBER');
-  print('╟──────────────────────────────────────────');
+  print('╟───────────────────────────────────────────');
 
   int count = 0;
   while(true) {
@@ -18,19 +18,19 @@ void main(){
     if(guess == answer){
       count++;
       print("║ ➜ "+guess.toString()+" is CORRECT ❤,total guesses: "+count.toString());
-      print("╟──────────────────────────────────────────");
+      print("╟───────────────────────────────────────────");
       print('║                  THE END');
-      print('╚══════════════════════════════════════════ ');
+      print('╚═══════════════════════════════════════════ ');
       break;
     }else{
       if(guess != null){
         count++;
         if(guess > answer){
           print("║ ➜ "+guess.toString()+" is TOO HIGH! ▲");
-          print("╟──────────────────────────────────────────");
+          print("╟───────────────────────────────────────────");
         }else if(guess < answer){
           print("║ ➜ "+guess.toString()+" is TOO LOW! ▼");
-          print("╟──────────────────────────────────────────");
+          print("╟───────────────────────────────────────────");
         }
       }else{
         continue;
